@@ -105,6 +105,7 @@ TARGET_PRELINK_MODULE := true
 # be used, and if that doesn't work, then the default is an
 # arm build
 -include $(TOPDIR)buildspec.mk
+-include vendor/*/$(TARGET_PRODUCT)/buildspec.mk
 
 # ---------------------------------------------------------------
 # Define most of the global variables.  These are the ones that
