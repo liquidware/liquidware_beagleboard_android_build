@@ -83,6 +83,12 @@ ifeq ($(FORCE_ARM_DEBUGGING),true)
   TARGET_thumb_CFLAGS += -marm -fno-omit-frame-pointer
 endif
 
+# Set BOARD_HAS_ARM_TLS_REG to "true" in your buildspec.mk
+# file if your hardware has a TLS register.
+ifeq ($(BOARD_HAS_ARM_TLS_REG),true)
+$(combo_target)GLOBAL_CFLAGS += -DHAVE_ARM_TLS_REGISTER
+endif
+
 android_config_h := $(call select-android-config-h,linux-arm)
 arch_include_dir := $(dir $(android_config_h))
 
