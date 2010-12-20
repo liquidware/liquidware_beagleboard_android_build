@@ -80,6 +80,7 @@ FRAMEWORKS_BASE_SUBDIRS := \
 	    media \
 	    opengl \
 	    sax \
+	    serial \
 	    telephony \
 	    wifi \
 	    vpn \
